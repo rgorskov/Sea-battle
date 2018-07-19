@@ -1,10 +1,11 @@
+
 ;(function(){
 	window.onload = initialize;
 
 	var player1, player2;	// объекты игроков
 	var turnInfo;			// элемент p#turn с инфой кто ходит
 	var delay;				// задержка для компа
-	//var help;
+	//var help;				// не доделал
 
 	function initialize(){
 		showInputForm();
