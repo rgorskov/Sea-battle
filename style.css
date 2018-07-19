@@ -1,0 +1,227 @@
+*{
+	margin: 0;
+	padding: 0;
+	/*outline: red solid 1px;*/
+	font-family: 'Arial', sans-serif;
+
+}
+
+/*****ФОРМА ВХОДА*****/
+#form{
+	display: none;
+  	background: white;
+  	border-radius: 30px;
+  	border: 1px solid #DCDCDC;
+  	width: 300px;
+ 	height: 240px;
+  	overflow: auto;
+  	margin: auto;
+  	position: absolute;
+  	top: 0; left: 0; bottom: 0; right: 0;
+   	z-index: 999;
+}
+
+.formInner {
+	padding: 0 10px;
+}
+
+.formInner p{
+	text-align: center;
+	font-size: 12px;
+}
+
+p.link{
+	text-decoration: underline;
+	color: #7FC9FF;
+	cursor: pointer;
+}
+
+.formInner input{
+	display: block;
+	width: 280px;
+	background: #DCDCDC;
+	border-width: 0;
+	border-radius: 20px;
+	line-height: 40px;
+	text-align: center;
+	margin: 7px 0;
+}
+
+.formInner input[type="submit"] {
+  background: #7FC9FF;
+  color: white;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.formInner input[type="submit"]:hover {
+  background: #7FD2FF;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.formInner h1 {
+  text-align: center;
+  font-weight: normal;
+  font-size: 25px;
+  margin: 20px 0 25px 0;
+  color: #707981;
+}
+
+/*********/
+
+.half .player{
+	text-align: center;
+	line-height: 2em;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.half{
+	float:left;
+	width: 50%;
+	min-width: 500px;
+}
+
+.container{
+	width: 600px;
+	height: 440px;
+	margin: 0 auto;
+	padding: 20px;
+	border:1px solid #DCDCDC;
+	border-radius: 20px;
+}
+
+.info{
+	width:140px;
+	position:relative;
+	margin-top: 50px;
+	text-align: center;
+}
+
+.info p.infoHead{
+	font-size: 1.5em;
+	padding-bottom: 0.5em;
+	margin-bottom: 0.5em;
+	border-bottom: 1px dashed #DCDCDC;
+}
+
+.info li{
+	list-style-position: inside;
+	list-style-type: none;
+	display: block;
+	width: 140px;
+	font-size: 1.2em;
+}
+
+.infoCircleContainer{
+	width: 80px;
+
+}
+
+.infoCircle{
+	border-radius: 50%;
+	background-color: #009933;
+	width: 10px;
+	height: 10px;
+	margin: 5px;
+}
+
+.shipCount{
+	padding: 0 0.5em;
+}
+
+p.infoSummary{
+	font-size: 1.5em;
+	padding-top: 0.5em;
+	margin-top: 0.5em;
+	border-top: 1px dashed #DCDCDC;
+}
+
+p.infoSummary div{
+	display: inline;
+}
+
+.field{
+	width: 400px;
+	height: 400px;
+	background-color: #66CCFF;
+	border-radius: 30px;
+	padding: 20px;
+}
+
+.floatLeft{
+	float:left;
+	/*margin-right: 10px;*/
+}
+
+.floatRight{
+	float:right;
+	/*margin-left: 10px;*/
+}
+
+.cell{
+
+	box-sizing: border-box;
+	width: 38px;
+	height: 38px;
+	margin: 1px;
+	float: left;
+	background-color: #ADD8E6;
+	cursor: pointer;
+	font-size:0;
+}
+
+/*
+.cell:hover{
+	background-color: #C0D8E6;
+}
+*/
+
+.ship{
+	background-color: #009933;
+	border-radius: 50%;
+	height:34px;
+	width:34px;
+	position: relative;
+	margin: 2px;
+}
+
+.injured{
+	background-color: #FF9900;
+}
+
+.dead{
+	background-color: #FF0000;
+}
+
+.miss{
+	background-color: black;
+	border-radius: 50%;
+	height: 16px;
+	width: 16px;
+	margin: 11px;
+}
+
+
+#main{
+	/*display:none;*/
+	/*opacity: 0.1;*/
+}
+
+.turnInfo{
+	text-align: center;
+	padding: 20px;
+	font-size: 1.5em;
+}
+
+#help{
+	font-size: 12px;
+	margin-top: 20px;
+}
+/*
+#turn h2{
+	font-weight: normal;
+}
+*/

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Морской бой</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+
+</head>
+<body>
+
+
+	<form id="form" name="enter" action="">
+		<div class="formInner">
+			<h1>Привет</h1>
+			<input type="text" name="userName" placeholder="Введи свое имя">
+			<p>и нажми</p>
+			<input type="submit" name='submit' value="Играть!">
+			<p>или</p>
+			<p id='linkDemo' class="link">запусти демонстрацию</p>
+		</div>
+	</form>
+
+
+
+	<div id="main">
+		<div class="half">
+			<div id="firstPlName" class="player">Игрок</div>
+			<div class="container">
+				<div class="field floatRight" id="firstField">
+
+				</div>
+
+				<div id="firstPlInfo" class="info floatLeft">
+					<p class="infoHead">Флот</p>
+					<ul>
+						<li>
+							<div class="infoCircleContainer floatLeft">
+								<div class="infoCircle floatRight"></div>
+							</div>
+							<div id="firstPlInfo_1" class="shipCount floatLeft"></div>
+						</li>
+						<li>
+							<div class="infoCircleContainer floatLeft">
+								<div class="infoCircle floatRight"></div>
+								<div class="infoCircle floatRight"></div>
+							</div>
+							<div id="firstPlInfo_2" class="shipCount floatLeft"></div>
+						</li>
+						<li>
+							<div class="infoCircleContainer floatLeft">
+								<div class="infoCircle floatRight"></div>
+								<div class="infoCircle floatRight"></div>
+								<div class="infoCircle floatRight"></div>
+							</div>
+							<div id="firstPlInfo_3" class="shipCount floatLeft"></div>
+						</li>
+						<li>
+							<div class="infoCircleContainer floatLeft">
+								<div class="infoCircle floatRight"></div>
+								<div class="infoCircle floatRight"></div>
+								<div class="infoCircle floatRight"></div>
+								<div class="infoCircle floatRight"></div>
+							</div>
+							<div id="firstPlInfo_4" class="shipCount floatLeft"></div>
+						</li>
+					</ul>
+					<div style="clear:both"></div>
+					<p class="infoSummary">Всего: <span id="firstPlInfo_Sum"></span></p>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="half">
+			<div id="secondPlName" class="player">Компьютер</div>
+			<div class="container">
+				<div class="field floatLeft" id="secondField">
+
+				</div>
+
+				<div id="secondPlInfo" class="info floatRight">
+					<p class="infoHead">Флот</p>
+					<ul>
+						<li>
+							<div class="infoCircleContainer floatRight">
+								<div class="infoCircle floatLeft"></div>
+							</div>
+							<div  id="secondPlInfo_1" class="shipCount floatRight"></div>
+						</li>
+						<li>
+							<div class="infoCircleContainer floatRight">
+								<div class="infoCircle floatLeft"></div>
+								<div class="infoCircle floatLeft"></div>
+							</div>
+							<div  id="secondPlInfo_2" class="shipCount floatRight"></div>
+						</li>
+						<li>
+							<div class="infoCircleContainer floatRight">
+								<div class="infoCircle floatLeft"></div>
+								<div class="infoCircle floatLeft"></div>
+								<div class="infoCircle floatLeft"></div>
+							</div>
+							<div  id="secondPlInfo_3" class="shipCount floatRight"></div>
+						</li>
+						<li>
+							<div class="infoCircleContainer floatRight">
+								<div class="infoCircle floatLeft"></div>
+								<div class="infoCircle floatLeft"></div>
+								<div class="infoCircle floatLeft"></div>
+								<div class="infoCircle floatLeft"></div>
+							</div>
+							<div  id="secondPlInfo_4" class="shipCount floatRight"></div>
+						</li>
+					</ul>
+					<div style="clear:both"></div>
+					<!--<div class="infoSummary"> Всего:<div id="secondPlInfo_Sum"></div></div>-->
+					<p class="infoSummary">Всего: <span id="secondPlInfo_Sum"></span></p>
+
+
+				</div>
+
+			</div>
+		</div>
+
+		<div style="clear:both"></div>
+
+		<div class="turnInfo">
+			<p id="turn" ></p>
+			<!--<p id='help' class="link">Справка</p>-->
+		</div>
+	</div>
+<!--		-->
+
+
+</body>
+</html>
