@@ -75,7 +75,7 @@
 		document.getElementById('main').style.opacity = '0.1';
 	}
 
-	//объект флота
+	//Конструктор объекта флота
 	function Navy(){
 		/*массив объектов кораблей (колво палуб-numDecks, массив Ship-ships) */
 		this.units = [];
@@ -212,7 +212,7 @@
 		}
 	}
 
-	//объект корабля
+	// конструктор объекта корабля
 	function Ship(d){
 		this.numDecks = d;	// количество палуб
 		this.decks = new Array(this.numDecks);	// массив с индексами палуб, если -1 то подбита
@@ -235,7 +235,7 @@
 		}
 	}
 
-	/*объект отображающейся в поле ячейки*/
+	/*конструктор объекта отображающейся в поле ячейки*/
 	function Cell(){
 		this.divCell = document.createElement('div');
 		this.divCell.setAttribute('class', 'cell');
@@ -263,7 +263,7 @@
 		//this.isEmpty = false;
 	}
 
-	// объект игрока
+	// конструктор объекта игрока
 	function Player(n, pf, auto, s, info){
 		this.name = n;			// имя
 		this.plField = pf;		// элемент с полем игрока
@@ -406,7 +406,7 @@
 
 	}
 
-	// объект с попаданием - записывается как элемент массива hitMap игрока
+	// конструктор объекта с попаданием - записывается как элемент массива hitMap игрока
 	function Moves(x, y, map){
 		this.x = x;		// координаты
 		this.y = y;		//
