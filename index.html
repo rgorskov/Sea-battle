@@ -10,7 +10,7 @@
 <body>
 
 
-	<form id="form" name="enter" action="">
+	<form id="enterForm" class="form" name="enter" action="">
 		<div class="formInner">
 			<h1>Привет</h1>
 			<input type="text" name="userName" placeholder="Введи свое имя">
@@ -21,7 +21,40 @@
 		</div>
 	</form>
 
+	<form id="helpForm" class="form" name="help" action="">
+		<div class="formInner">
+			<h1>Справка</h1>
+			<ul>
+				<li>
+					<div class="ship inlineBlock floatLeft"></div>
+					<div class="helpShipDisсr inlineBlock floatLeft">- целый корабль</div>
+				</li>
+				<div style="clear:both"></div>
+				<li>
+					<div class="ship injured inlineBlock floatLeft"></div>
+					<div class="helpShipDisсr inlineBlock floatLeft">- корабль подбит</div>
+				</li>
+				<div style="clear:both"></div>
+				<li>
+					<div class="ship dead inlineBlock floatLeft"></div>
+					<div class="helpShipDisсr inlineBlock floatLeft">- корабль уничтожен</div>
+				</li>
+				<div style="clear:both"></div>
+				<li>
+					<div class="ship miss inlineBlock floatLeft"></div>
+					<div class="helpShipDisсr inlineBlock floatLeft">- выстрел мимо</div>
+				</li>
+			</ul>
+			<input type="submit" name='submit' value="Хорошо, я понял">
+		</div>
+	</form>
 
+	<form id="winForm" class="form" name="win" action="">
+		<div class="formInner">
+			<h1 id="winner"></h1>
+			<input type="submit" name='submit' value="ОК">
+		</div>
+	</form>
 
 	<div id="main">
 		<div class="half">
@@ -128,7 +161,7 @@
 
 		<div class="turnInfo">
 			<p id="turn" ></p>
-			<!--<p id='help' class="link">Справка</p>-->
+			<p id='linkHelp' class="link">Справка</p>
 		</div>
 	</div>
 <!--		-->

@@ -5,32 +5,26 @@
 	var player1, player2;	// объекты игроков
 	var turnInfo;			// элемент p#turn с инфой кто ходит
 	var delay;				// задержка для компа
-	//var help;				// не доделал
 
 	function initialize(){
 		showInputForm();
 		turnInfo = document.getElementById('turn');
-		//help = ;
-		//document.getElementById('help').addEventListener('click', showHelp);
-	}
-
-	/*
-	function showHelp(){
-		showForm();
-		form.innerHTML = '';
-	}
-	*/
-
-	function showInputForm(){
-		showForm();
 
 		document.getElementById('linkDemo').addEventListener('click', linkDemoHandler);
-		document.getElementById('form').onsubmit = formSubmitHandler;
+		document.getElementById('enterForm').onsubmit = enterFormSubmitHandler;
+		document.getElementById('linkHelp').addEventListener('click', linkHelpHandler)
+		document.getElementById('helpForm').onsubmit = helpFormSubmitHandler;
+		document.getElementById('winForm').onsubmit = winFormSubmitHabdler;
+	}
+
+
+	function showInputForm(){
+		showForm(document.getElementById('enterForm'));
 	}
 
 	// запустить демо
 	function linkDemoHandler(e){
-		hideForm();
+		hideForm(document.getElementById('enterForm'));
 		document.getElementById('linkDemo').removeEventListener('click', linkDemoHandler);
 
 		document.getElementById('firstPlName').innerHTML = 'Игрок 1';
@@ -48,11 +42,11 @@
 	}
 
 	// нажимает играть
-	function formSubmitHandler(e){
-		hideForm();
+	function enterFormSubmitHandler(e){
+		hideForm(document.getElementById('enterForm'));
 		e.preventDefault();
-		var userName = form.elements['userName'];
-		var showedName = (userName.value) ? userName.value : "Игрок";
+		var userName = document.forms['enter'].elements['userName'].value;
+		var showedName = (userName) ? userName : "Игрок";
 		document.getElementById('firstPlName').innerHTML = showedName;
 
 		//
@@ -65,13 +59,29 @@
 		player1.turn();	// первым ходит игрок
 	}
 
-	function hideForm(){
-		document.getElementById('form').style.display = 'none';
+	function linkHelpHandler(){
+		showForm(document.getElementById('helpForm'));
+	}
+
+	function helpFormSubmitHandler(e){
+		hideForm(document.getElementById('helpForm'));
+		e.preventDefault();
+	}
+
+	function winFormSubmitHabdler(e){
+		hideForm(document.getElementById('winForm'));
+		e.preventDefault();
+	}
+
+	function hideForm(form){
+		//document.getElementById('enterForm').style.display = 'none';
+		form.style.display = 'none';
 		document.getElementById('main').style.opacity = '1';
 	}
 
-	function showForm(){
-		document.getElementById('form').style.display = 'block';
+	function showForm(form){
+		//document.getElementById('enterForm').style.display = 'block';
+		form.style.display = 'block';
 		document.getElementById('main').style.opacity = '0.1';
 	}
 
@@ -279,11 +289,12 @@
 
 		//
 		this.win = function(){
-			showForm();
-			var msg = "<h1 style='margin:0'>" + this.name + ' одержал победу!';
-			document.getElementsByClassName('formInner')[0].innerHTML = msg;
-			document.getElementById('form').style.padding = '40px 0';
-			document.getElementById('form').style.height = '80px';
+			showForm(document.getElementById('winForm'));
+			var msg = this.name + ' одержал победу!';
+			document.getElementById('winner').innerHTML = msg;
+			/*document.getElementsByClassName('formInner')[0].innerHTML = msg;
+			document.getElementById('enterForm').style.padding = '40px 0';
+			document.getElementById('enterForm').style.height = '80px';*/
 		};
 
 		// массив с объектами Cell

@@ -7,18 +7,22 @@
 }
 
 /*****ФОРМА ВХОДА*****/
-#form{
-	display: none;
+.form{
+	/*display: none;*/
   	background: white;
   	border-radius: 30px;
   	border: 1px solid #DCDCDC;
-  	width: 300px;
- 	height: 240px;
+
   	overflow: auto;
   	margin: auto;
   	position: absolute;
   	top: 0; left: 0; bottom: 0; right: 0;
    	z-index: 999;
+}
+
+#enterForm{
+	width: 300px;
+ 	height: 240px;
 }
 
 .formInner {
@@ -67,6 +71,34 @@ p.link{
   font-size: 25px;
   margin: 20px 0 25px 0;
   color: #707981;
+}
+
+#helpForm{
+	display: none;
+	width: 300px;
+ 	height: 300px;
+}
+
+.formInner li{
+	height: 40px;
+	width: 240px;
+	margin: 0 auto;
+	list-style-type: none;
+}
+
+.inlineBlock{
+	display: inline-block;
+}
+
+.helpShipDisсr{
+	line-height: 40px;
+	margin-left: 10px;
+}
+
+#winForm{
+	display: none;
+	width: 300px;
+ 	height: 160px;
 }
 
 /*********/
@@ -216,8 +248,8 @@ p.infoSummary div{
 	font-size: 1.5em;
 }
 
-#help{
-	font-size: 12px;
+#linkHelp{
+	font-size: 14px;
 	margin-top: 20px;
 }
 /*
